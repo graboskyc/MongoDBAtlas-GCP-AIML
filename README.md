@@ -3,6 +3,8 @@
 ## Background
 This is a tutorial on how to use MongoDB Atlas in conjunction with Google Cloud Platform AI/ML APIs to create a event-driven model in Python.
 
+This is part of a workshop series presented by MongoDB and Google Cloud. However it can also be done on its own.
+
 ## Setup
 ### MongoDB Setup
 * Deploy MongoDB Atlas
