@@ -2,3 +2,4 @@ tornado
 dnspython
 pymongo
 configparser
+google-cloud-vision

@@ -13,8 +13,10 @@ This is part of a workshop series presented by MongoDB and Google Cloud. However
 * Create a database called `gcpdemo` with a collection called `democol` 
 
 ### GCP Setup
-* Deploy an instance
-* Some sort of configuration of the Vision API here
+* Deploy an instance - optional or run this locally
+* Turn on Vision API
+* Generate credentials and store in `gcpcreds.json`
+* Connect billing?
 * Install python3 and git on that instance
 * Clone this github repo onto that instance
 * Edit `settings.cfg` with the details created in section above

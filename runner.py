@@ -1,4 +1,5 @@
 import pymongo
+from bson.objectid import ObjectId
 import tornado.ioloop                                                                                                                                                                                       
 import tornado.web                                                                                                                                                                                          
 import tornado.websocket
@@ -6,6 +7,7 @@ import threading
 import os
 from bson.json_util import dumps
 import configparser
+from google.cloud import vision
 
 # global variables
 _WEBSETTINGS = { "static_path": os.path.join(os.path.dirname(__file__)+"Web/", "static") }
@@ -18,6 +20,10 @@ cfg.read('settings.cfg')
 # configure connection to mongodb
 conn = pymongo.MongoClient(cfg['DEFAULT']['_URI'])
 handle = conn[cfg['DEFAULT']['_DBNAME']][cfg['DEFAULT']['_COLNAME']]
+
+# configure connection to gcp vision api
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="gcpcreds.json"
+gcpapi = vision.ImageAnnotatorClient()
 
 #########
 # configure web interface
@@ -71,6 +77,28 @@ if __name__ == "__main__":
 	change_stream = handle.watch()
 	# every change send to client
 	for change in change_stream:
+		if change["operationType"] == "insert":
+			if "url" in change["fullDocument"]:
+				print("It has a URL: " + change["fullDocument"]["url"])
+
+				image = vision.types.Image()
+				image.source.image_uri = change["fullDocument"]["url"]
+				resp = gcpapi.label_detection(image=image)
+				labels = []
+				for label in resp.label_annotations:
+					# odd formatting i dont have time for right now
+					obj = {}
+					obj['description'] = label.description
+					obj['score'] = label.score
+					labels.append(obj)
+
+				handle.update_one({'_id':ObjectId(change["fullDocument"]["_id"])}, {"$set": {"gcpvisionlabels":labels}})
+
+
+		if change["operationType"] == "update":
+			print("Updated!")
+		if change["operationType"] == "replace":
+			print("You're using Compass aren't you!")
 		for c in _clients:
 			print(dumps(change))
 			print("")
