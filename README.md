@@ -25,11 +25,16 @@ This is part of a workshop series presented by MongoDB and Google Cloud. However
 * Ensure GCP firewall rules are set up to allow access to the default ports `8088` and `8089` or whatever you changed them to in `settings.cfg`
 * Open a web browser and go to the server you deployed port `8088` and open developer console to make sure no errors. in python script window see a client is connected
 
+![](images/newss01.png)
+
 ## Execution
 * Insert a document into the database using MongoDB Compass. 
 * The document should have a field called `url` which is a full URL to an image.
 * Notice that in the web page and on the CLI output of the python script that it saw an insert
 * Notice that after the insert, the change stream called the Google Vision API to see what is in it
+
+![](images/newss03.png)
+![](images/newss02.png)
 
 ## Sample Data
 Feel free to use the following URLs for execution:

@@ -3,3 +3,4 @@ pyv/
 Web/static/css/.DS_Store
 .vscode/settings.json
 *.pyc
+images/.DS_Store
