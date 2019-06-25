@@ -9,20 +9,32 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
-    var localip = window.location.hostname;
-    var connection = new WebSocket('ws://' + localip + ":8089");
-    connection.onmessage = function (event) {
-      console.log(event);
-      var mdbmsg = JSON.parse(event.data);
-      var html = "<p><code>"+JSON.stringify(mdbmsg)+"</code></p>"
-      $('#div_msg').append(html);
-    }
+    $(document).ready(function() {
+      
+      var localip = window.location.hostname;
+      var connection = new WebSocket('ws://' + localip + ":8089");
+      connection.onmessage = function (event) {
+        console.log(event);
+        var mdbmsg = JSON.parse(event.data);
+        var html = "<p><code>"+JSON.stringify(mdbmsg)+"</code></p>"
+        $('#div_msg').append(html);
+      }
+      $("#btn_insert").click(function(){
+        connection.send($('#txt_url').val());
+        $('#txt_url').val('');
+      }); 
+    });
   </script>
 
 </head>
 
 <body>
   <h1>Here's My Messages!</h1>
+  <hr />
+    <div style="height:50px;">
+      <input type="text" id="txt_url" style="width:600px;float:left;" class="form-control" /> <button id="btn_insert" class="btn btn-success" style="float:left;">Insert</button>
+    </div>
+  <hr />
   <div id="div_msg"></div>
 </body>
 

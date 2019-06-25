@@ -8,6 +8,7 @@ import os
 from bson.json_util import dumps
 import configparser
 from google.cloud import vision
+import json
 
 # global variables
 _WEBSETTINGS = { "static_path": os.path.join(os.path.dirname(__file__)+"Web/", "static") }
@@ -35,13 +36,14 @@ class MainHandler(tornado.web.RequestHandler):
 class WebSockHandler(tornado.websocket.WebSocketHandler):
 	def open(self):
 		print("New client connected")
-		#_clients.append({"id":self.client_id, "ws":self})
 		_clients.append(self)
 		self.write_message("You are connected")
 
 	def on_message(self, msg):
 		print(msg)
-		self.write_message(msg)
+		#self.write_message(msg)
+		# oh man this is bad practice
+		handle.insert_one({"url":msg})
 
 	def on_close(self):
 		#i = 0
