@@ -14,6 +14,7 @@ This is part of a workshop series presented by MongoDB and Google Cloud. However
 
 ### GCP Setup
 * Deploy an instance
+* Some sort of configuration of the Vision API here
 * Install python3 and git on that instance
 * Clone this github repo onto that instance
 * Edit `settings.cfg` with the details created in section above
@@ -27,3 +28,11 @@ This is part of a workshop series presented by MongoDB and Google Cloud. However
 * The document should have a field called `url` which is a full URL to an image.
 * Notice that in the web page and on the CLI output of the python script that it saw an insert
 * Notice that after the insert, the change stream called the Google Vision API to see what is in it
+
+## Sample Data
+Feel free to use the following URLs for execution:
+1. https://storage.googleapis.com/demo-visionapi-atlas/StatueofLiberty.jpeg
+2. https://storage.googleapis.com/demo-visionapi-atlas/crash1.jpg
+3. https://storage.googleapis.com/demo-visionapi-atlas/nike_logo_30021.jpg
+4. https://storage.googleapis.com/demo-visionapi-atlas/Marketing/eiffel-tower.jpg
+5. https://storage.googleapis.com/demo-visionapi-atlas/Finance/check.jpg
