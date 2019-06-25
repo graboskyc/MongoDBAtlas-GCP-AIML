@@ -1,0 +1,5 @@
+venv/
+pyv/
+Web/static/css/.DS_Store
+.vscode/settings.json
+*.pyc
