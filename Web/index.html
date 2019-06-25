@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{ static_url("css/bootstrap.min.css") }}" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://getbootstrap.com/docs/4.3/examples/sticky-footer/sticky-footer.css" rel="stylesheet">  
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
@@ -29,13 +30,21 @@
 </head>
 
 <body>
-  <h1>Here's My Messages!</h1>
-  <hr />
-    <div style="height:50px;">
-      <input type="text" id="txt_url" style="width:600px;float:left;" class="form-control" /> <button id="btn_insert" class="btn btn-success" style="float:left;">Insert</button>
+    <div class="container" style="height:1000px;">
+      <h1>Here's My Change Stream!</h1>
+      <hr />
+      <div style="height:75px;">
+        <input type="text" id="txt_url" style="width:600px;float:left;" class="form-control" /> <button id="btn_insert" class="btn btn-success" style="float:left;">Insert</button>
+      </div>
+      <hr />
+      <div id="div_msg" style="height:800px;overflow-x: hidden; overflow-y: scroll;"></div>
     </div>
-  <hr />
-  <div id="div_msg"></div>
-</body>
 
+    <footer class="footer" >
+      <div class="container" style="height:50px;">
+        <span class="text-muted"><a href="https://github.com/graboskyc/MongoDBAtlas-GCP-AIML" target="_blank">GitHub Link Here</a></span>
+      </div>
+    </footer>
+
+</body>
 </html>
