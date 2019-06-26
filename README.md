@@ -57,4 +57,7 @@ Feel free to use the following URLs for execution:
 ## Extra Credit
 * Create a GCP Cloud Storage Bucket to host your own images
 * Follow along with the `runnerAdvanced.py` using the GCP Natural Language API to do sentiment analysis on non-URL text in the `text` attribute of a document
-* Find another GCP API and integrate with it
+* Find another GCP API and integrate with it. Examples:
+  * Use the Cloud Translation API to extend the `runnerAdvanced.py` to translate your text into another language
+  * Consider integrating the Google Assistant API
+
