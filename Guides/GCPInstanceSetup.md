@@ -42,14 +42,18 @@ Protocols and ports:
 ![](images/image7.png)
 
 * Run the following commands:
-  * `sudo apt-get update`
-  * `sudo apt-get install python3-pip`
-  * `git clone https://github.com/graboskyc/MongoDBAtlas-GCP-AIML.git`
-  * `cd MongoDBAtlas-GCP-AIML/FinishedSampleCode`
-  * `pip install -r requirements.txt`
+
+```
+  sudo apt-get update
+  sudo apt-get install python3-pip
+  git clone https://github.com/graboskyc/MongoDBAtlas-GCP-AIML.git
+  cd MongoDBAtlas-GCP-AIML/FinishedSampleCode
+  pip install -r requirements.txt
+```
+
 * Edit the `gcpcreds.json` to have the credentials of the json file you downloaded above
 * Edit `settings.cfg` to have the Atlas connection string created above
-* Run `python2 runner.py` to start the application
+* Run `python3 runner.py` to start the application
 * Visit the URL of your server port 8088 and you should see a web page
 
 ![](images/newss02.png)
