@@ -35,6 +35,7 @@ _45 Minutes_
 * [Readme for configuring MongoDB Atlas](Guides/AtlasSetup.md)
 * [Readme for configuring GCP Vision API](Guides/GCPVisionSetup.md)
 * [Readme for configuring the GCP Instance](Guides/GCPInstanceSetup.md)
+* [Readme for writing this code from scratch](Guides/Code.md) or alternately just use the code in `FinishedSampleCode`
 
 ## Execution
 * Open a web browser to the GCP instance running on port 8088 over http
