@@ -77,31 +77,35 @@ if __name__ == "__main__":
 
 	# connect to a change stream
 	change_stream = handle.watch()
-	# every change send to client
+	# every change in the db
 	for change in change_stream:
+		# can be insert, update, replace (Compass)
 		if change["operationType"] == "insert":
+			# make sure it had a URL attribute
 			if "url" in change["fullDocument"]:
-				print("It has a URL: " + change["fullDocument"]["url"])
-
+				# boilerplate to prep gcp api request
 				image = vision.types.Image()
 				image.source.image_uri = change["fullDocument"]["url"]
 				resp = gcpapi.label_detection(image=image)
+
+				# odd formatting i dont have time for right now so just process it first
 				labels = []
 				for label in resp.label_annotations:
-					# odd formatting i dont have time for right now
 					obj = {}
 					obj['description'] = label.description
 					obj['score'] = label.score
 					labels.append(obj)
 
+				# update mongodb record with response from GCP
 				handle.update_one({'_id':ObjectId(change["fullDocument"]["_id"])}, {"$set": {"gcpvisionlabels":labels}})
 
+		# print to screen
+		print(dumps(change))
+		print("")
 
-		if change["operationType"] == "update":
-			print("Updated!")
-		if change["operationType"] == "replace":
-			print("You're using Compass aren't you!")
 		for c in _clients:
-			print(dumps(change))
-			print("")
-			c.write_message(dumps(change))
+			# fix disconnecting clients symptom rather than fixings
+			try:
+				c.write_message(dumps(change))
+			except:
+				pass
