@@ -14,8 +14,9 @@ You can use the completed code located in the `FinishedSampleCode` if you want. 
 ```
   sudo apt-get update
   sudo apt-get install python3-pip
-  pip install tornado dnspython pymongo configparser google-cloud-vision
+  pip install tornado dnspython pymongo google-cloud-vision
 ```
+
 * The packages are used for (respectively): a python webserver, allow the use of MongoDB SRV connection strings, connect to MongoDB databases, parse config files, and connect to the GCP Vision API
 * create a directory called `example` and then `cd example`
 
@@ -99,9 +100,6 @@ gcpapi = vision.ImageAnnotatorClient()
 Next we create the boilerplate code to create a webserver in python using tornado:
 
 ```
-#########
-# configure web interface
-#########
 class MainHandler(tornado.web.RequestHandler):
 	def get(self):
 		self.render("index.html", title="Welcome")
