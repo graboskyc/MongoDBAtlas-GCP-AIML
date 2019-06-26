@@ -88,24 +88,61 @@ _45 Minutes_
 * Get a credential and put it in `gcpcreds.json`
 
 ### GCP Instance Setup
-* Deploy an instance - optional or run this locally
-* Generate credentials and store in `gcpcreds.json`
-* Connect billing?
-* Install python3 and git on that instance
-* Clone this github repo onto that instance
-* Edit `settings.cfg` with the connection string created in section above
-* Using pip, install all requirements in `requirements.txt`
-* Start the script by running `python3 runner.py`
-* Ensure GCP firewall rules are set up to allow access to the default ports `8088` and `8089` or whatever you changed them to in `settings.cfg`
-* Open a web browser and go to the server you deployed port `8088` and open developer console to make sure no errors. in python script window see a client is connected
+* Create a Debian Linux GCE VM instance using the instructions given here [link](https://www.google.com/url?q=https://cloud.google.com/compute/docs/quickstart-linux&sa=D&ust=1560383195254000)
+
+![](images/image3.png)
+
+* In the search box at the top, enter “Firewall” and select the matching suggestion”Firewall rules”under “VPC network”
+
+![](images/image19.png)
+
+* Click “Create Firewall Rule” at the top to create a new rule to open up the needed port for our new server
+
+![](images/image18.png)
+
+* Enter the following details and click “Create”:
+```
+Name: port8088
+Targets: All instances in the network
+Source IP ranges:   [your specific source IP / range]  
+Protocols and ports:  
+    tcp: 8088
+``` 
+![](images/image38.png)
+
+* Repeat above for port 8089
+
+* In the search field up top, enter “compute engine” and select the suggestion:
+
+![](images/image27.png)
+
+* After your instance is created, SSH to your instance by clicking on the SSH button of your instance.
+
+![](images/image16.png)
+
+* You should see a CloudShell window similar to this open...
+
+![](images/image7.png)
+
+* Run `git clone https://github.com/graboskyc/MongoDBAtlas-GCP-AIML.git`
+* cd to that directory
+* `pip install requirements.txt`
+* Edit the `gcpcreds.json` to have the credntials created above
+* Edit `settings.cfg` to have the Atlas connection string created above
+* `python runner.py`
+* Visit the URL of your server port 8088 and you should see a web page
+
+![](images/newss02.png)
 
 ## Execution
-* Insert a document into the database using MongoDB Compass. 
-* The document should have a field called `url` which is a full URL to an image.
+* Insert a document into the database using MongoDB Compass or the new Data Explorer view in MongoDB Atlas which you can get to via the "Collections" button. The document you insert should have a field called `url` which is a full URL to an image.
+* Alternately enter the URL into the web page directly and press the green "Insert" button
 * Notice that in the web page and on the CLI output of the python script that it saw an insert
-* Notice that after the insert, the change stream called the Google Vision API to see what is in it
+* Notice that after the insert, the change stream called the Google Vision API to see what is in it. Refresh the Compass or Atlas Data Explorer view and see the rich data structure of the GCP Vision API.
 ![](images/newss03.png)
-![](images/newss02.png)
+
+## Extra Credit
+* Create a GCP Cloud Storage Bucket to host your own images
 
 ## Sample Data
 Feel free to use the following URLs for execution:
