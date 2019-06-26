@@ -26,6 +26,7 @@ _45 Minutes_
 * Open firewall rules in GCP for ports 8088 and 8089 for this instance
 * Install python, clone this github repo on to the host
 * Configure the `FinishedSampleCode/settings.cfg` and `FinishedSampleCode/gcpcreds.cfg` to have the Atlas connection string and GCP credentials in them that you created earlier
+* Install any python requirements by running `pip install -r FinishedSampleCode/requirements.txt`
 * Start the application using `python3 FinishedSampleCode/runner.py`
 * Open a web browser to the GCP instance running on port 8088 over http
 
