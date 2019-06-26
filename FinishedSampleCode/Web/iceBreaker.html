@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      
+      var localip = window.location.hostname;
+      var connection = new WebSocket('ws://' + localip + ":8089");
+      connection.onmessage = function (event) {
+        console.log(event);
+        var mdbmsg = JSON.parse(event.data);
+        var html = "<p><b>"+mdbmsg.fullDocument.text+"</b> <small>("+(Math.floor(mdbmsg.fullDocument.gcplanguage.score*10000)/100)+" score)</small></p><hr />";
+        $('#div_msg').prepend(html);
+      }
+      $("#btn_insert").click(function(){
+        connection.send($('#txt_comment').val());
+        $('#commentform').hide();
+      }); 
+    });
+  </script>
+
+</head>
+
+<body>
+    <div class="container" style="height:1000px;">
+      <div class="jumbotron" style="background: url(https://atlaswkshp-cdxwc.mongodbstitch.com/BG2.png); background-repeat: no-repeat; background-position:  center center; background-size: cover;color:#ffffff;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+      <h1>Welcome</h1>
+        <p>Fill out what you want to learn today and press "Send"!</p>
+        <p>Keep this page open to see what people (and Google) think!</p>
+        <p>When you leave here today, you can build this app</p>
+    </div>
+      
+      <div id="commentform">
+        <label for="txt_comment">Feedback (What are you hoping to learn today):</label>
+        <textarea rows="4" cols="50" name="txt_comment" id="txt_comment" class="form-control"></textarea>
+        <br />
+        <button class="btn btn-lg btn-success" id="btn_insert">Send</button>
+        <br /><br />
+    </div>
+      
+      <div id="div_msg" style="height:800px;overflow-x: hidden; overflow-y: scroll;"></div>
+    </div>
+
+    <footer class="footer" style="position:absolute;bottom:0px;height:50px;width:100%;text-align:center;">
+      <div class="container" style="width:50%;text-align: center">
+        Presented by Google &amp; MongoDB <br />
+        <span class="text-muted"><a href="https://github.com/graboskyc/MongoDBAtlas-GCP-AIML" target="_blank">GitHub Link Here</a></span>
+      </div>
+    </footer>
+
+</body>
+</html>
