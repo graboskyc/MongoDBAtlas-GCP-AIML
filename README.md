@@ -48,6 +48,7 @@ _45 Minutes_
 * [Readme for writing this code from scratch](Guides/Code.md) or alternately just use the code in `FinishedSampleCode`
 
 ## Execution
+* Start the application using `python3 FinishedSampleCode/runner.py`
 * Open a web browser to the GCP instance running on port 8088 over http
 * Insert a document into the database using MongoDB Compass or the new Data Explorer view in MongoDB Atlas which you can get to via the "Collections" button. The document you insert should have a field called `url` which is a full URL to an image.
 * Alternately enter the URL into the web page directly and press the green "Insert" button
