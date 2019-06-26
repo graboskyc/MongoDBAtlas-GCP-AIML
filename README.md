@@ -6,11 +6,21 @@ This is a tutorial on how to use MongoDB Atlas in conjunction with Google Cloud 
 This is part of a workshop series presented by MongoDB and Google Cloud. However it can also be done on its own.
 
 ### Technical Complexity
+_Beginner_ to _Intermediate_ 
 
-_Beginner_
+### Skills 
+Familiarity with the following skill sets will help:
+* Python 3
+* HTML
+* Basic JSON (will be covered in MongoDB introduction slides)
+
+
+### Software required
+* Modern web browser such as Chrome
+  * Needed to access MongoDB Atlas, GCP Console, and Google CloudShell 
+* Optionally install [MongoDB Compass](https://www.mongodb.com/download-center/compass) but this is not required
 
 ### Duration
-
 _45 Minutes_
 
 ## Setup
