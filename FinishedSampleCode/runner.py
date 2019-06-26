@@ -47,11 +47,6 @@ class WebSockHandler(tornado.websocket.WebSocketHandler):
 		handle.insert_one({"url":msg, "created":datetime.now()})
 
 	def on_close(self):
-		#i = 0
-		#for c in _clients:
-		#	if(c["id"] == self.client_id):
-		#		_clients.pop(i)
-		#	i = i + 1
 		print("Client disconnected")
 
 	def check_origin(self, origin):
