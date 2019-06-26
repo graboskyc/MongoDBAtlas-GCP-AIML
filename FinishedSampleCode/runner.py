@@ -9,6 +9,7 @@ from bson.json_util import dumps
 import configparser
 from google.cloud import vision
 import json
+from datetime import datetime
 
 # global variables
 _WEBSETTINGS = { "static_path": os.path.join(os.path.dirname(__file__)+"Web/", "static") }
@@ -43,7 +44,7 @@ class WebSockHandler(tornado.websocket.WebSocketHandler):
 		print(msg)
 		#self.write_message(msg)
 		# oh man this is bad practice
-		handle.insert_one({"url":msg})
+		handle.insert_one({"url":msg, "created":datetime.now()})
 
 	def on_close(self):
 		#i = 0
