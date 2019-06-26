@@ -24,6 +24,7 @@ Using the text editor of your choice, create a `index.html` with the simplified 
 
 ```
 <html><head>
+  <title>{{ title }}</title>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
@@ -46,16 +47,14 @@ Using the text editor of your choice, create a `index.html` with the simplified 
       <h1>Here's My Change Stream!</h1>
       <h3>Newest events on top</h3>
       <hr />
-      <div style="height:75px;">
-        <input type="text" id="txt_url" /> <button id="btn_insert">Insert</button>
-      </div>
+      <input type="text" id="txt_url" /> <button id="btn_insert">Insert</button>
       <hr />
       <div id="div_msg"></div>
     </div>
 </body></html>
 ```
 
-To review this code, it is a simple HTML page that uses Jquery to simplify some JavaScript work. It opens a websocket to the same server this is running on port 8089 and will take whatever it recieves and putting it in the container called `div_msg`. There is also a basic text box that when the button is clicked, it will send that (a URL) over the websocket back to the server.
+To review this code, it is a simple HTML page that uses JQuery to simplify some JavaScript work. It opens a websocket to the same server this is running on port 8089 and will take whatever it recieves and putting it in the container called `div_msg`. There is also a basic text box that when the button is clicked, it will send that (a URL) over the websocket back to the server.
 
 ## Create your GCP config store
 * Take the JSON credential file you downloaded earlier from GCP and copy the contents
@@ -69,8 +68,8 @@ At the top we start with our imports:
 ```
 import pymongo
 from bson.objectid import ObjectId
-import tornado.ioloop                                                                                                                                                                                       
-import tornado.web                                                                                                                                                                                          
+import tornado.ioloop
+import tornado.web              
 import tornado.websocket
 import threading
 import os
@@ -79,7 +78,9 @@ from google.cloud import vision
 import json
 ```
 
-After that is there, let's put our global configuration and modify it with your MongoDB Python connection string
+To review these imports, `pymongo` is the official MongoDB driver for python, we need the `bson` line to convert the string version of a ObjectID to the `ObjectID` datatype found in the [BSON spec](http://bsonspec.org/) and to quickly dump the output to strings, `tornado` is used to make a quick and simple web server, `json` is used to parse JSON, and then the official library for communicating with the GCP Vision API is used.
+
+After that is there, let's put our global configuration and modify it with your MongoDB Python connection string:
 
 ```
 # global variables
@@ -122,7 +123,9 @@ class WebSockHandler(tornado.websocket.WebSocketHandler):
 		return True
 ```
 
-Next is the main loop. We start by starting the web server itself
+We will skip the inner workings of this. However what it does is renders the index.html page and will expose out the websocket so that it can respond based on new connection events, when a message is recieved by the websocket, and overrides security restrictions.
+
+Next is the main loop. We start by starting the web server itself on the ports 8088 and 8089 and run them in the background so we can continue running the rest of the script.
 
 ```
 # start up the web servers as tornado applications
@@ -184,6 +187,8 @@ for change in change_stream:
 That last piece just prints the data out the web socket to the web page as well as the output of the python script on the command line.
 
 This is meant to be a simple illustration of how this works. Security is bypassed and this will not scale well. However with this knowledge, you can build applications using these features.
+
+Note that Python is very particular about white space, so as you copy/paste, make sure that your tabs are all even.
 
 ## Running the aplication
 Once that is saved, run the application:
