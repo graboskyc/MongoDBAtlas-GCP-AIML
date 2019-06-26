@@ -56,3 +56,5 @@ Feel free to use the following URLs for execution:
 
 ## Extra Credit
 * Create a GCP Cloud Storage Bucket to host your own images
+* Follow along with the `runnerAdvanced.py` using the GCP Natural Language API to do sentiment analysis on non-URL text in the `text` attribute of a document
+* Find another GCP API and integrate with it
