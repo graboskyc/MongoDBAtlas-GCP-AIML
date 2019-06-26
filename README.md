@@ -112,6 +112,8 @@ Protocols and ports:
 
 * Repeat above for port 8089
 
+* *WE NEED A STEP HERE ON THE API CREDENTIAL GENERATION*
+
 * In the search field up top, enter “compute engine” and select the suggestion:
 
 ![](images/image27.png)
