@@ -1,5 +1,4 @@
 # GCP Vision API Setup
-![](images/newss01.png)
 
 * Go to cloud.google.com and login with your Google account. If you don't have a Google account, please create a free trial account by following instructions at this [link](https://console.cloud.google.com/freetrial).
 
@@ -27,4 +26,16 @@
 
 ![image](images/image5.png)
 
-* Get a credential and put it in `gcpcreds.json`
+* In the search box, search for "Cloud Vision API" and choose that option in the drop down
+
+![](images/newss06.png)
+
+* Enable the API
+
+![](images/newss01.png)
+
+* Create a credential of type "Service Account Key" with a name of your choosing, Key Type is JSON, and Role of ******** - _what is the minimum here_?
+
+![](images/newss07.png)
+
+* When saving, it will download the JSON file. Read its contents put it in `gcpcreds.json`
