@@ -46,6 +46,7 @@ _45 Minutes_
 * [Readme for configuring GCP Vision API](Guides/GCPVisionSetup.md)
 * [Readme for configuring the GCP Instance](Guides/GCPInstanceSetup.md)
 * [Readme for writing this code from scratch](Guides/Code.md) or alternately just use the code in `FinishedSampleCode`
+* [Instructor's Notes](Guides/Instructors.md)
 
 # Execution
 * Start the application using `python3 FinishedSampleCode/runner.py`
