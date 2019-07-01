@@ -45,10 +45,10 @@ Protocols and ports:
 
 ```
   sudo apt-get update
-  sudo apt-get install python3-pip
+  sudo apt-get install -y python3-pip
   git clone https://github.com/graboskyc/MongoDBAtlas-GCP-AIML.git
   cd MongoDBAtlas-GCP-AIML/FinishedSampleCode
-  pip install -r requirements.txt
+  python3 -m pip install -r requirements.txt
 ```
 
 * Edit the `gcpcreds.json` to have the credentials of the json file you downloaded above
