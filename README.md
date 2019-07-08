@@ -46,6 +46,7 @@ _45 Minutes_
 * [Readme for configuring GCP Vision API](Guides/GCPVisionSetup.md)
 * [Readme for configuring the GCP Instance](Guides/GCPInstanceSetup.md)
 * [Readme for writing this code from scratch](Guides/Code.md) or alternately just use the code in `FinishedSampleCode`
+* [The guide for CRUD operations used during the instruction part of workshop](Guides/CRUD.md)
 * [Instructor's Notes](Guides/Instructors.md)
 
 # Execution
