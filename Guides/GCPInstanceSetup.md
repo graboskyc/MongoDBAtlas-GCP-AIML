@@ -56,6 +56,6 @@ Protocols and ports:
 * Edit `settings.cfg` to have the Atlas connection string created above
 * Run `python3 runner.py` to start the application
 * Visit the URL of your server port 8088 and you should see a web page
-  * e.g. visit http://<your google cloud instance public ip address>:8088
+  * e.g. if the public IP address of your Google Cloud instance is 12.23.45.56, open a browser and visit http://12.23.45.56:8088
 
 ![](images/newss02.png)
