@@ -46,6 +46,7 @@ Protocols and ports:
 ```
   sudo apt-get update
   sudo apt-get install -y python3-pip
+  sudo apt-get install -y git
   git clone https://github.com/graboskyc/MongoDBAtlas-GCP-AIML.git
   cd MongoDBAtlas-GCP-AIML/FinishedSampleCode
   python3 -m pip install -r requirements.txt
