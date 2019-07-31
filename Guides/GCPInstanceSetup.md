@@ -56,5 +56,6 @@ Protocols and ports:
 * Edit `settings.cfg` to have the Atlas connection string created above
 * Run `python3 runner.py` to start the application
 * Visit the URL of your server port 8088 and you should see a web page
+* e.g. http://23.45.56.78/8088
 
 ![](images/newss02.png)
