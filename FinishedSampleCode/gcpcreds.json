@@ -1,12 +1,3 @@
 {
-  "type": "service_account",
-  "project_id": "gcpatlasdemo",
-  "private_key_id": "0e9636c8d97c0a3e909ccad3df6462c4fc1051da",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC14B/35HLT58Xw\n9Q9v/uknmULPn5eAjrCRht3rWoLZcvJQw8Q4sb1/vzK/0G9UogH9hWzgBTy3zPos\nhlXtlppVRMUcjAXtEK6ES9uyy8HOnol1HDJbwonrrxjXxYUNAlAeqFHkrcHzoG2z\n4avbL4+vEjMmMwnhi0NpvHUAHe/VBvYV9anTVjjZ4L18B20UN7C3by1tpYqeXO+a\nOhFWZdYKKlAQE3OceqJ9ts8fCT8438Gx5Ar4qWwoH2PNBnfw/6SwOdAuadhR64TK\nhoYWIe03naWGACc7Tboyye6wxHGOCRqt9m0Zmx8aukMNL2vZJrs9oZQWUvXh/Y0F\ncIK8ubKfAgMBAAECggEAP8A79GyDQ3vuijOcIam8mEDEhnpuZIWfpqMbjq+/RfFg\ntqaoVScYQXsHkuzA2W2gPPlT3IJ5cgPLfWfpHsq3dkQQw5zhRuOeCIl+jQGXAZHY\npNApZrieF5rcnmWB6blx1A00B3BQl9EYIwFrd/0H5FoAy9cAE6r5Cksgx9W2h3i8\nrmfYahNSwTvYVSDsOxgGkVRxfOhNp4n6u9OW5ebmv4xgwnuakRTdWz+5KCOG1tlN\neJGnDlaLgNZkxTJR7F2r2BPiFC9HZ8E62jeb6CyW0prHTsa6LG2Cj20JIFjYYfCP\nU1mrFg5goCkf2yJiwATN8KbnEthqOu+FJACYJKH/gQKBgQD1P/4Trz+zFTLHGDsV\njsfWzokiPFZdcid3/m3auVcCom9MkoJCKSupgjXwDhi0pOpmFhp+jREWTFqPRMt4\nFAsI2bwpYCs4A5+aFw0gjSFRoa8jeNu1gAeRKhMD7Mj0vdTpcW/pGNg8nA4mdV+c\nZ04eeAKiBInwAPJ1uKWN1TmMcQKBgQC92P4QKy2xW37q1XP6ImLcb3wOHpyqY3FO\ntlbQeSd4FhO3aXWWw5ihKpuzmymFVgpwUMaQ7C3SojM6IBxuHT0WRMZgJuQkN45C\n7FNk6dxKHBZtQvet6yb35p5OEMPN0knXmFdIUZsX0vIvW0wRNkwtF8PbigMuwzPV\nJ41wrZ34DwKBgALAH/paic1ZXINtGySHwGgBUvpmUNWldRncaaD9WSN3bOYf8oQJ\ncCrrge1aSx6jhtl0QAHRVTK50n4u2FVVbDZCMuEH6hQrvjt9LLGDw67lsFAmh9hG\nQk93eFUf77UG9/9SPV4Q4EP1wBbgVB0t72taDzV/9YgSiqWVV436qTWRAoGAHd8u\n2sxwfB+xcLH1db5DX/wKwQ4ACK9s/L2kG1l05GhU4d8uKXLNaU6TAUfA2MIZEmMj\nW1pOO35aISM8VfczzXU04Zw8+ZXkRJN6674Ac4jH3plS74K4tvkKn63zoUcdZ1cJ\nJM/yX2VJxjnPVkX85nt+zeSBa7I7TabTko8+8/ECgYEAzDwlsr6CX9TuwjyOr5Ch\n7oWNuPY16Vuj4hB1CraOGYGr+UK3S1/j3uc8ODxOoSErsNtMJI/zuNdCb8vnLVwf\n5zVK/RgRsC+xnLhmW0FlOnCUQkf6K8H6ugL0qxTnFCTsufttXjQReIKB5/Py0Pzu\nJRlf5n+9L9ooH6l5eOts3lY=\n-----END PRIVATE KEY-----\n",
-  "client_email": "atlastogcp@gcpatlasdemo.iam.gserviceaccount.com",
-  "client_id": "115600629990860278527",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/atlastogcp%40gcpatlasdemo.iam.gserviceaccount.com"
+// previous code was only for in class workshop and cred was removed from google
 }
