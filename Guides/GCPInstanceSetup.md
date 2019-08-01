@@ -27,7 +27,7 @@ Protocols and ports:
 
 * Click the blue "Create credentials" then choose "Service account key" in the list 
 
-* Choose "new service account" and give it a name like atlasgcpdemo. For the scope, choose *what should i choose here?* and JSON format. Save and it will download the JSON file. Keep these contents for later.
+* Choose "new service account" and give it a name like atlasgcpdemo. For the scope, choose `Owner` and JSON format. Save and it will download the JSON file. Keep these contents for later.
 
 * Go back to the Compute Engine page to list all VM instances.
 
