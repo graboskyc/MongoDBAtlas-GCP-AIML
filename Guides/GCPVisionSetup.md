@@ -34,7 +34,7 @@
 
 ![](images/newss01.png)
 
-* Create a credential of type "Service Account Key" with a name of your choosing, Key Type is JSON, and Role of ******** - _what is the minimum here_?
+* Create a credential of type "Service Account Key" with a name of your choosing, Key Type is JSON, and Role of `Owner`
 
 ![](images/newss07.png)
 
