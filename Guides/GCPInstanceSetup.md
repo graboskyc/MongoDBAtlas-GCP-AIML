@@ -21,13 +21,7 @@ Protocols and ports:
 ``` 
 ![](images/newss05.png)
 
-* In the top box, search for "Credentials" and choose the auto-complete option 
-
-* In the search field up top, enter “compute engine” and select the suggestion: "Credentials APIs & Services"
-
-* Click the blue "Create credentials" then choose "Service account key" in the list 
-
-* Choose "new service account" and give it a name like atlasgcpdemo. For the scope, choose `Owner` and JSON format. Save and it will download the JSON file. Keep these contents for later.
+* (Make sure to do the API Vision setup)[GCPVisionSetup.md]
 
 * Go back to the Compute Engine page to list all VM instances.
 
