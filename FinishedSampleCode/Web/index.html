@@ -10,16 +10,27 @@
 
   <script type="text/javascript">
     $(document).ready(function() {
-      
+      // what is the server IP address
       var localip = window.location.hostname;
+      // open a websocket to that server but use the websocket port not http port
       var connection = new WebSocket('ws://' + localip + ":8089");
+      
+      // we got a message from the python code via the web socket 
       connection.onmessage = function (event) {
+        // put it in developer console
         console.log(event);
+        // parse the JSON to remove odd double quoting and stuff then put it in an HTML 
         var mdbmsg = JSON.parse(event.data);
         var html = "<p><code>"+JSON.stringify(mdbmsg)+"</code></p><hr />"
+        // write the html to the page in newest-first order
         $('#div_msg').prepend(html);
       }
+      
+      // when we click the insert button
       $("#btn_insert").click(function(){
+        // get the value of the html text box, 
+        // send it over the websocket we created above 
+        // then make text box empty 
         connection.send($('#txt_url').val());
         $('#txt_url').val('');
       }); 
