@@ -21,7 +21,7 @@ Protocols and ports:
 ``` 
 ![](images/newss05.png)
 
-* (Make sure to do the API Vision setup)[GCPVisionSetup.md]
+* [Make sure to do the API Vision setup](GCPVisionSetup.md)
 
 * Go back to the Compute Engine page to list all VM instances.
 
