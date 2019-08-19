@@ -1,2 +1,12 @@
 {
+    "type": "service_account",
+    "project_id": "gcpatlasdemo",
+    "private_key_id": "aed808eeb40fa1b7b0f1bdc28f71740544eb7720",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuHJx4cGeAfrkQ\nPDzlu4wY95c50HhrVhj3WLLpfSD3YMoLbt1rtggwQuQGMFwrZGrdD60D0gDhcsyZ\nW0Jeq+ITzCovysu1pkF6dy5PLp+tqt1y6+a09ACJDlVcR6jeDXbO5u13yiN3fA2+\nFPiXtvXyKjPpPErz8ma6+v6gh/5663XDc6NXx+q7G0C4q2aGyFvnjXBnQfdnaxtd\nyL5G0KRnRaUk8CinEwaY3mxsBzi4TdG88oCAsXxxQBI7a5T7gW9pe/YCxHl4CmXK\n04H0M6POZ3MV42Pa/rd4mUUITCJsJrxpjRq6zb7MRda98J3jvA3hl8tJocYIJaZ/\ne94kvS7JAgMBAAECggEAGWfQXHHzuwKtXf/u14txv7Tk//PPlm3w5QAFfzTEdNmj\n3F44Iz7jsVMZXbPRxyfMa2by/9M1ULBFHX18+5PIwHXH6W2weC2DHBZm5KPw0Huq\n+4QOMnTw3Q7WiB68C8awLDRIY0nUugXD0EApc/h8/nHdCEPwIJTMG62DLl5u/3Vn\n6RGCH2N2dIHO1/uhuOH25ev5e9vULXxyG2mce3J7DQvfqHbExx5CBSlSDpkXl5Wu\nhBWfZeevO5rZw4+WipghbBlliqfjbKCUF8vW/RzhOYrZbHvgogFgIwMDYLCpo2oL\nLfKfYNj9oazVZZzFikFA9b7C0nmHpcrSWMUteO4w1wKBgQDnDFIp5uSUktWRs2Cs\nsl3yjCxZBnVHT9DM46Z3ploYYRDqw8rcKNUfpiRZjx6p87BzA0Eecn4zf8nFDWPv\nAarArOJBjwIgB9zh4P3c1Jt50B602lHVfo2QctXloTERYYOFnxWXAIwn6OcIk9rr\nXP38WMozOJef/klTJxHoXcIQgwKBgQDA6jKCMXL0W3V7ScaFCvNiHBWTJpDWX82u\nRP5SXAxPHdnC80hFruDHJa3yAk6Yt6aLimiKnuRCf0jV66Jx5fmSoE8dVRdY8CTt\n9Dbc2NpYNt2dGrxT1LmpFIS99X70pSahpRHPVQlmKo2zVUPk9fzO0X8VdPNNIwjT\n1f9Kr3IJwwKBgQDD/pWsaes5hZ2Z7Vpy5RQA7puoIWxXRAPR6sOJ+BmxWJXrMI/j\nVtgD8wIe3uOaM9hYmEgjNeiMcziL6iH926IntABysIeS+FiNXDi9nbUODlgd/p0w\nyBv6jw+XrbdcESZqsVq1L4e1S0LA6fvpcIccC43rCXTGCgXVfe0Y+n/nVQKBgFpf\n3NWdMMtE5V6iizvci3RUz86l7IhhTUvsym/u611NEK0Bp8PtTyQ8hKaxafylXIJW\nju8RzMFSO97riqhtImQMccO+Dzf9GG/ZTrJbbL6SxXNKCRwEtg19rUoIbjdR/y0O\n1a8ZmVOhb8ypjyr+CjchcbWtmiVy2jnTMMveMUBdAoGAEBMuxyR/wCDBGKSRTqTx\n3NLUeR6jdErNe1PKArjN8rRjY9QdE4U5TVO8bhiZan1+U6noXVRllwntU5BbkJPb\nWYyxu6zuMM+nhD9LRQG8PZ0vBCUVAfn5ec6A3uw2ZCEZzhntqV17B0W8swcDYvfC\n8ZY1FH0WKugeJQi7L2rvrbE=\n-----END PRIVATE KEY-----\n",
+    "client_email": "atlastogcp@gcpatlasdemo.iam.gserviceaccount.com",
+    "client_id": "115600629990860278527",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/atlastogcp%40gcpatlasdemo.iam.gserviceaccount.com"
 }
