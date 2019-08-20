@@ -46,6 +46,8 @@ Protocols and ports:
   python3 -m pip install -r requirements.txt
 ```
 
+Please note some people (on Windows with Firefox but it does apply to other browsers) that they cannot copy/paste the entire block above into Cloud Shell in one go. They must copy/paste line-by-line
+
 * Edit the `gcpcreds.json` to have the credentials of the json file you downloaded above
 * Edit `settings.cfg` to have the Atlas connection string created above
 * Run `python3 runner.py` to start the application
